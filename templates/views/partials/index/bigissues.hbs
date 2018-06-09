@@ -1,0 +1,57 @@
+<div class="container">
+    <!-- ROW -->
+    <div class="row">
+        <!-- Main Column -->
+        <div class="col-md-12">
+            <!-- section title -->
+            <div class="section-title">
+                <h2 class="title">Big Issues</h2>
+            </div>
+            <!-- /section title -->
+            <!-- Tab content -->
+            <div class="tab-content">
+                <!-- tab1 -->
+                <div id="tab1" class="tab-pane fade in active">
+                    <!-- row -->
+                    <div class="row">
+                        {{#each data.issues}}
+                        <!-- Column -->
+                        <div class="col-md-4">
+                            <!-- ARTICLE -->
+                            <article class="article thumb-article">
+                                <div class="article-img">
+                                    <img src="{{this.thumbnail.secure_url}}" alt="">
+                                </div>
+                                <div class="article-body">
+                                    <ul class="article-info">
+                                        <li class="article-category">
+                                            <a href="/issue/{{this.slug}}">Special</a>
+                                        </li>
+                                        <li class="article-type">
+                                            <i class="fa fa-file-text"></i>
+                                        </li>
+                                    </ul>
+                                    <h3 class="article-title">
+                                        <a href="/issue/{{this.slug}}">{{this.title}}</a>
+                                    </h3>
+                                    <ul class="article-meta">
+                                        <li>
+                                            <i class="fa fa-clock-o"></i> {{this.date}}</li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <!-- /ARTICLE -->
+                        </div>
+                        <!-- /Column -->
+                        {{/each}}
+                    </div>
+                    <!-- /row -->
+                </div>
+                <!-- /tab1 -->
+            </div>
+            <!-- /tab content -->
+        </div>
+        <!-- /Main Column -->
+    </div>
+    <!-- /ROW -->
+</div>
